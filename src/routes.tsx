@@ -4,6 +4,9 @@ import Landing from "./pages/Landing";
 import OrphanagesMap from "./pages/OrphanagesMap";
 import Orphanage from "./pages/Orphanage";
 import CreateOrphanage from "./pages/CreateOrphanage";
+import Login from "./pages/RestrictArea/Login";
+import Dashboard from "./pages/RestrictArea/DashBoard/Dashboard";
+import OrphanageEdit from "./pages/RestrictArea/DashBoard/OrphanageEdit";
 
 function Routes() {
 	return (
@@ -14,6 +17,11 @@ function Routes() {
 
 				<Route path={"/orphanage/create"} component={CreateOrphanage} />
 				<Route path={"/orphanage/:id"} component={Orphanage} />
+
+				{/* RestrictArea */}
+				<Route path={"/admin"} component={Login} />
+				<Route path={"/dashboard"} component={Dashboard} />
+				<Route path={"/orphanage-edit/:id"} component={OrphanageEdit} />
 			</Switch>
 		</BrowserRouter>
 	);

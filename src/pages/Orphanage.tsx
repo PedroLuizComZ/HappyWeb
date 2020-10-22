@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
 import { FiClock, FiInfo } from "react-icons/fi";
 import { Map, Marker, TileLayer } from "react-leaflet";
 import { useParams } from "react-router-dom";
@@ -104,6 +103,7 @@ export default function Orphanage() {
 							<footer>
 								<a
 									target="_blank"
+									rel="noopener noreferrer"
 									href={`https://www.google.com/maps/dir/?api=1&destination=${orphanage.latitude},${orphanage.longitude}`}
 								>
 									Ver rotas no Google Maps

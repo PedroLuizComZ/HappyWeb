@@ -1,0 +1,125 @@
+#page-dashboard {
+	min-height: 100vh;
+	display: flex;
+}
+
+#page-dashboard aside {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+	background: #15c3d6;
+	padding: 16px;
+}
+
+#page-dashboard aside img {
+	width: 48px;
+}
+
+#page-dashboard aside .user-actions {
+	display: flex;
+	flex-direction: column;
+}
+
+#page-dashboard aside .user-actions .active {
+	background-color: #ffd666;
+	color: #0089a5;
+}
+
+#page-dashboard aside .user-actions div,
+#page-dashboard aside .logoff {
+	padding: 12px;
+	border-radius: 16px;
+	background-color: #12afcb;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px 0;
+	cursor: pointer;
+}
+
+#page-dashboard main {
+	max-height: 100vh;
+	overflow: auto;
+	flex: 1;
+}
+
+#orphanges-created-container {
+	padding: 50px;
+}
+
+#orphanges-created-container .orphanges-created-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: solid 2px #d3e2e5;
+	margin-bottom: 25px;
+	padding-bottom: 16px;
+}
+
+#orphanges-created-container .orphanges-created-header h1 {
+	font-family: "Nunito";
+	font-weight: bold;
+	font-size: 32px;
+	color: #4d6f80;
+}
+
+#orphanges-created-container .orphanges-created-header span {
+	font-family: "Nunito";
+	font-weight: 600;
+	font-size: 16px;
+	text-align: right;
+	color: #8fa7b3;
+}
+
+#orphanges-created-container .orphanges-created-item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+#orphanges-created-container .orphanges-created-item .map-container {
+	width: 45%;
+	background-color: #ffffff;
+	margin: 15px;
+	border-radius: 20px;
+}
+
+#orphanges-created-container
+	.orphanges-created-item
+	.map-container
+	.leaflet-container {
+	border-radius: 20px;
+}
+
+#orphanges-created-container .orphanges-created-item footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 20px;
+	padding: 16px;
+}
+
+#orphanges-created-container .orphanges-created-item footer span {
+	font-family: "Nunito";
+	font-weight: bold;
+	font-size: 24px;
+	color: #4d6f80;
+}
+
+#orphanges-created-container .orphanges-created-item footer div {
+	display: flex;
+}
+
+#orphanges-created-container .orphanges-created-item footer div a {
+	display: flex;
+	border: 0;
+	border-radius: 12px;
+	padding: 11px;
+	background: #ebf2f5;
+	margin-left: 12px;
+	cursor: pointer;
+	color: #15c3d6;
+	text-decoration: none;
+}

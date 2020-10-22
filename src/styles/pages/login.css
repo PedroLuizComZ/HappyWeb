@@ -1,0 +1,101 @@
+#page-login {
+	min-height: 100vh;
+	display: flex;
+}
+
+#page-login .splash-container {
+	width: 60%;
+	background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#page-login .splash-container .splash-data {
+	margin-top: 65px;
+	text-align: center;
+}
+
+#page-login .form-container {
+	width: 40%;
+	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#page-login .form-container svg {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+}
+
+#page-login .form-container h1 {
+	font-family: "Nunito";
+	font-weight: bold;
+	font-size: 32px;
+	color: #5c8599;
+	margin-bottom: 35px;
+}
+
+#page-login .form-container form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 0 40px;
+}
+
+#page-login .form-container form .input-format {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 18px;
+}
+
+#page-login .form-container form .input-format label {
+	font-family: "Nunito";
+	font-weight: 600;
+	font-size: 16px;
+	color: #8fa7b3;
+	margin-bottom: 6px;
+}
+
+#page-login .form-container form .input-format input {
+	background: #f5f8fa;
+	height: 50px;
+	padding: 0 20px;
+	border: 1px solid #d3e2e5;
+	border-radius: 20px;
+	color: #5c8599;
+	font-size: 16px;
+}
+
+#page-login .form-container form a {
+	font-family: "Nunito";
+	font-weight: 600;
+	font-size: 16px;
+	text-decoration: none;
+	color: #8fa7b3;
+	text-align: center;
+	margin-bottom: 25px;
+	margin-top: 10px;
+}
+
+#page-login .form-container form button {
+	background: #37c77f;
+	border-radius: 20px;
+	width: 100%;
+	padding: 14px 0;
+	border: 0;
+	color: #ffffff;
+	cursor: pointer;
+	font-size: 16px;
+
+	transition: opacity 0.3s;
+}
+
+#page-login .form-container form button:hover {
+	opacity: 0.85;
+}

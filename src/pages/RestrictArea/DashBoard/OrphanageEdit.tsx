@@ -1,17 +1,22 @@
-import React, { FormEvent, useState, ChangeEvent } from "react";
+import React, { FormEvent, useState, ChangeEvent, useEffect } from "react";
 import { Map, Marker, TileLayer } from "react-leaflet";
 import { LeafletMouseEvent } from "leaflet";
 
 import { FiPlus } from "react-icons/fi";
 
-import "../styles/pages/create-orphanage.css";
-import Sidebar from "../components/Sidebar";
-import mapIcon from "../utils/mapIcon";
-import api from "../services/api";
-import { useHistory } from "react-router-dom";
+import "../../../styles/pages/create-orphanage.css";
+import Sidebar from "../../../components/Sidebar";
+import mapIcon from "../../../utils/mapIcon";
+import api from "../../../services/api";
+import { useHistory, useParams } from "react-router-dom";
 
-export default function CreateOrphanage() {
+interface OrphanageParams {
+	id: string;
+}
+
+export default function OrphanageEdit() {
 	const history = useHistory();
+	const params = useParams<OrphanageParams>();
 
 	const [position, setPosition] = useState({ latitude: 0, longitude: 0 });
 
@@ -22,6 +27,37 @@ export default function CreateOrphanage() {
 	const [open_on_weekends, setOpenOnWeekends] = useState(true);
 	const [images, setImages] = useState<File[]>([]);
 	const [previewImages, setPreviewImages] = useState<string[]>([]);
+
+	useEffect(() => {
+		api.get(`orphanages/${params.id}`).then((response) => {
+			if (response.status === 200) {
+				const {
+					name,
+					about,
+					instructions,
+					opening_hours,
+					open_on_weekends,
+					images,
+					latitude,
+					longitude,
+				} = response.data;
+
+				setName(name);
+				setAbout(about);
+				setInstructions(instructions);
+				setOpeningHours(opening_hours);
+				setOpenOnWeekends(open_on_weekends);
+				setImages(images);
+				setPosition({ latitude: latitude, longitude: longitude });
+
+				const previewImages = images.map((image: any) => {
+					return image.url;
+				});
+
+				setPreviewImages(previewImages);
+			}
+		});
+	}, [params.id]);
 
 	function handleMapClick(event: LeafletMouseEvent) {
 		const { lat, lng } = event.latlng;
@@ -35,6 +71,7 @@ export default function CreateOrphanage() {
 
 		const data = new FormData();
 
+		data.append("id", params.id);
 		data.append("name", name);
 		data.append("about", about);
 		data.append("latitude", String(latitude));
@@ -46,9 +83,9 @@ export default function CreateOrphanage() {
 			data.append("images", image);
 		});
 
-		api.post("orphanages", data).then((response) => {
-			alert("Cadastro realizado com sucesso");
-			history.push("/app");
+		api.put("orphanages", data).then((response) => {
+			alert("Orfanato editado com sucesso");
+			history.push("/dashboard");
 		});
 	}
 
