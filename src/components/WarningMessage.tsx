@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/components/warningMessage.css";
-import { Button, Modal, ModalBody } from "reactstrap";
+import { Modal, ModalBody } from "reactstrap";
 import warningIcon from "../images/warning-icon.svg";
 import api from "../services/api";
 

@@ -1,4 +1,4 @@
-import React, { FormEvent, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Map, Marker, TileLayer } from "react-leaflet";
 
 import "../../../styles/pages/aprove-orphanage.css";
