@@ -7,6 +7,7 @@ import CreateOrphanage from "./pages/CreateOrphanage";
 import Login from "./pages/RestrictArea/Login";
 import Dashboard from "./pages/RestrictArea/DashBoard/Dashboard";
 import OrphanageEdit from "./pages/RestrictArea/DashBoard/OrphanageEdit";
+import OrphanageAprove from "./pages/RestrictArea/DashBoard/OrphanageAprove";
 
 function Routes() {
 	return (
@@ -22,6 +23,10 @@ function Routes() {
 				<Route path={"/admin"} component={Login} />
 				<Route path={"/dashboard"} component={Dashboard} />
 				<Route path={"/orphanage-edit/:id"} component={OrphanageEdit} />
+				<Route
+					path={"/orphanage-aprove/:id"}
+					component={OrphanageAprove}
+				/>
 			</Switch>
 		</BrowserRouter>
 	);

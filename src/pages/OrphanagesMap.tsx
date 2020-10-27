@@ -18,7 +18,7 @@ interface Orphanage {
 
 function OrphanagesMap() {
 	useEffect(() => {
-		api.get("orphanages").then((response) => {
+		api.get("orphanages_aproved").then((response) => {
 			setOrphanages(response.data);
 		});
 	}, []);
@@ -72,7 +72,7 @@ function OrphanagesMap() {
 			</Map>
 
 			<Link to={"/orphanage/create"} className={"create-orphanage"}>
-				<FiPlus />
+				<FiPlus size={20} color={"#fff"} />
 			</Link>
 		</div>
 	);

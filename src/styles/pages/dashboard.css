@@ -112,7 +112,8 @@
 	display: flex;
 }
 
-#orphanges-created-container .orphanges-created-item footer div a {
+#orphanges-created-container .orphanges-created-item footer div a,
+#orphanges-created-container .orphanges-created-item footer div button {
 	display: flex;
 	border: 0;
 	border-radius: 12px;

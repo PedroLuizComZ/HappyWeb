@@ -3,6 +3,7 @@ import { FiEdit3, FiTrash } from "react-icons/fi";
 
 import { Map, Marker, TileLayer } from "react-leaflet";
 import { Link } from "react-router-dom";
+import WarningMessage from "../../../components/WarningMessage";
 import api from "../../../services/api";
 import mapIcon from "../../../utils/mapIcon";
 
@@ -15,9 +16,19 @@ interface Orphanage {
 
 function OrphanageCreated() {
 	const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
+	const [orphanageId, setOrphanageId] = useState(0);
+	const [modal, setModal] = useState(false);
+
+	function openModal(userId: number) {
+		setOrphanageId(userId);
+		setModal(false);
+		setTimeout(() => {
+			setModal(true);
+		}, 200);
+	}
 
 	useEffect(() => {
-		api.get("orphanages").then((response) => {
+		api.get("orphanages_aproved").then((response) => {
 			setOrphanages(response.data);
 		});
 	}, []);
@@ -63,22 +74,22 @@ function OrphanageCreated() {
 								<div>
 									<Link
 										to={`/orphanage-edit/${orphanage.id}`}
-										type="button"
 									>
 										<FiEdit3 />
 									</Link>
-									<Link
-										to={`/orphanage-edit/${orphanage.id}`}
+									<button
+										onClick={() => openModal(orphanage.id)}
 										type="button"
 									>
 										<FiTrash />
-									</Link>
+									</button>
 								</div>
 							</footer>
 						</div>
 					);
 				})}
 			</div>
+			<WarningMessage id={orphanageId} modalProp={modal} />
 		</div>
 	);
 }
