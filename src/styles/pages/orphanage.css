@@ -55,7 +55,7 @@
 	}
 
 	.orphanage-details .orphanage-details-content {
-		padding: 30px;
+		padding: 30px !important;
 	}
 }
 
