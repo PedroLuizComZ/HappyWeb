@@ -53,6 +53,10 @@
 		justify-content: space-around !important;
 		flex-wrap: wrap !important;
 	}
+
+	.orphanage-details .orphanage-details-content {
+		padding: 30px;
+	}
 }
 
 .orphanage-details > img {
