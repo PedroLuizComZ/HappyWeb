@@ -60,7 +60,7 @@ function OrphanagePendent() {
 							</Map>
 
 							<footer>
-								<span>Orf. Esperança</span>
+								<span>{orphanage.name}</span>
 								<div>
 									<Link
 										to={`/orphanage-aprove/${orphanage.id}`}

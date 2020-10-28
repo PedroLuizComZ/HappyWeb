@@ -10,7 +10,7 @@
 
 #page-landing .content-wrapper {
 	position: relative;
-
+	padding: 50px;
 	width: 100%;
 	max-width: 1000px;
 
@@ -23,6 +23,22 @@
 	justify-content: space-between;
 
 	background: url("../../images/landing.svg") no-repeat 80% center;
+}
+
+@media only screen and (max-width: 945px) {
+	#page-landing .content-wrapper {
+		background: none;
+		position: fixed;
+	}
+
+	.content-wrapper .location {
+		display: none !important;
+	}
+
+	#page-landing .content-wrapper main h1 {
+		font-size: 32px;
+		line-height: unset !important;
+	}
 }
 
 #page-landing .content-wrapper main h1 {
@@ -41,8 +57,8 @@
 
 .content-wrapper .location {
 	position: absolute;
-	right: 0;
-	top: 0;
+	right: 50px;
+	top: 50px;
 
 	font-size: 24px;
 	line-height: 34px;
@@ -59,8 +75,8 @@
 
 .content-wrapper .enter-app {
 	position: absolute;
-	right: 0;
-	bottom: 0;
+	right: 50px;
+	bottom: 50px;
 
 	width: 80px;
 	height: 80px;

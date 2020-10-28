@@ -10,6 +10,12 @@ aside.app-sidebar {
 	align-items: center;
 }
 
+@media only screen and (max-width: 800px) {
+	aside.app-sidebar {
+		display: none !important;
+	}
+}
+
 aside.app-sidebar img {
 	width: 48px;
 }

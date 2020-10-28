@@ -19,6 +19,13 @@ form.create-orphanage-form {
 	overflow: hidden;
 }
 
+@media only screen and (max-width: 800px) {
+	form.create-orphanage-form {
+		width: 100%;
+		padding: 30px 45px;
+	}
+}
+
 form.create-orphanage-form .leaflet-container {
 	margin-bottom: 40px;
 	border: 1px solid #d3e2e5;
