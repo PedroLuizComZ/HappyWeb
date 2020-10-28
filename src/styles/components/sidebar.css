@@ -10,7 +10,7 @@ aside.app-sidebar {
 	align-items: center;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
 	aside.app-sidebar {
 		display: none !important;
 	}
