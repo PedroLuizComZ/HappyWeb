@@ -22,6 +22,37 @@
 	.orphanage-details {
 		width: 100vw !important;
 	}
+
+	.orphanage-details .orphanage-details-content h1 {
+		font-size: 36px !important;
+		line-height: 46px !important;
+	}
+
+	.orphanage-details .orphanage-details-content h2 {
+		font-size: 30px !important;
+		line-height: 40px !important;
+	}
+
+	.orphanage-details .orphanage-details-content .open-details {
+		grid-template-columns: 1fr !important;
+	}
+
+	.orphanage-details .orphanage-details-content .open-details div.hour {
+		margin-bottom: 16px;
+	}
+
+	.orphanage-details .images button {
+		height: 70px !important;
+		width: 70px !important;
+	}
+
+	.orphanage-details .images {
+		display: flex !important;
+		align-items: center !important;
+		margin: 16px 40px 0 !important;
+		justify-content: space-around !important;
+		flex-wrap: wrap !important;
+	}
 }
 
 .orphanage-details > img {
@@ -119,7 +150,6 @@
 
 .orphanage-details .orphanage-details-content .open-details {
 	margin-top: 24px;
-
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 20px;
